@@ -7,8 +7,8 @@ class Header extends Component {
 
   render(){
     return (
-      <div class="ui inverted segment">
-        <h4 class="ui red inverted header">
+      <div className="ui inverted segment">
+        <h4 className="ui red inverted header">
           Albums
         </h4>
       </div>
