@@ -10,16 +10,17 @@ class eachAlbum extends Component {
     return (
       <div className="ui inverted segment">
         <div className="ui inverted relaxed divided list">
-
           <div className="item">
             <div className="content">
               <div className="ui blue inverted header">
                 {this.props.album.title}
               </div>
-                {this.props.album.id}
+              <div className="ui green inverted header">
+                User Id: {this.props.album.userId}
+              </div>
+              Album Id: {this.props.album.id}
             </div>
           </div>
-
         </div>
       </div>
     );
