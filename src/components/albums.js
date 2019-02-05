@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import EachAlbum from './eachAlbum';
 
 class Albums extends Component {
   constructor(props) {
@@ -13,12 +14,6 @@ class Albums extends Component {
   fetchAlbums() {
     fetch("https://jsonplaceholder.typicode.com/albums")
     .then(res => res.json())
-    .then(result => result.map(albums => (
-      {
-        userId: `${albums.userId}`,
-        title: `${albums.title}`
-      }
-    )))
     .then(albums => this.setState({
       albums: albums,
       isLoading: false
@@ -27,25 +22,17 @@ class Albums extends Component {
   }
 
   render() {
+    console.log(this.state.albums)
     if (this.state.isLoading) {
       return(
         <div>...Loading</div>
       );
     } else {
       return (
-        <div className="ui inverted segment">
-          <div className="ui inverted relaxed divided list">
-
-            <div className="item">
-              <div className="content">
-                <div className="ui blue inverted header">
-                  Snickerdoodle
-              </div>
-                An excellent companion
-            </div>
-            </div>
-
-          </div>
+        <div>
+          {this.state.albums.map(album => {
+            return <EachAlbum key={album.id} album={album}/>
+          })}
         </div>
       );
     }
