@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 class eachAlbum extends Component {
   constructor(props) {
     super(props);
-    // console.log('p', props);
   }
 
   render() {

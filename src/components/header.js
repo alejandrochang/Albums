@@ -7,7 +7,7 @@ class Header extends Component {
 
   render(){
     return (
-      <div className="ui inverted segment">
+      <div className="ui inverted segment" style={{textAlign: 'center', fontSize: '35px'}}>
         <h4 className="ui red inverted header">
           Albums
         </h4>
