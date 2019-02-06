@@ -22,7 +22,6 @@ class Albums extends Component {
   }
 
   render() {
-    console.log(this.state.albums)
     if (this.state.isLoading) {
       return(
         <div>...Loading</div>
